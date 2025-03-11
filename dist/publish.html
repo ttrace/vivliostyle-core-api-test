@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>202408-ガラスの下の母</title>
+    <style>
+      @charset "UTF-8";
+      :root {
+        --font-size: 4mm;
+        --line-height: 1.75;
+      }
+
+      html {
+        orphans: 1;
+        widows: 1;
+        color: black;
+      }
+
+      body {
+        writing-mode: vertical-rl;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      @page {
+        size: 148mm 210mm;
+        block-size: calc(var(--font-size) * var(--line-height) * 18);
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 8%;
+        margin-right: 8%;
+        /* 以下、マージンボックスに継承される */
+        font-size: 6pt;
+        font-family: "游明朝", "YuMincho", serif;
+        /* 本来不要（<span class="smaller"><span class="smaller">ルート要素の指定が継承される</span></span>）だが、現時点のvivliostyle.jsの制限により必要 */
+        vertical-align: top;
+      }
+
+      @page : first {
+        counter-reset: page 0;
+      }
+
+      @page :left {
+        margin-right: 6%;
+        margin-left: 10%;
+        @bottom-left {
+          content: "ガラスの下の母 13字×18行 " counter(page) "";
+          margin-left: 0mm;
+          margin-bottom: 5%;
+          writing-mode: horizontal-tb;
+          font-size: 10Q;
+          /* CSS仕様上は@pageルール内に書けばよいが、現時点のvivliostyle.jsの制限によりここに書く */
+        }
+      }
+
+      @page :right {
+        margin-left: 6%;
+        margin-right: 10%;
+        /* border-bottom: 1pt solid black; */
+        /* 右下ノンブル */
+        @bottom-right {
+          content: "ガラスの下の母 13字×18行 " counter(page) "";
+          margin-right: 0mm;
+          margin-bottom: 5%;
+          writing-mode: horizontal-tb;
+          font-size: 10Q;
+          /* CSS仕様上は@pageルール内に書けばよいが、現時点のvivliostyle.jsの制限によりここに書く */
+        }
+      }
+
+      html {
+        font-family: "游明朝", "YuMincho", serif;
+        font-weight: Medium;
+        text-align: justify;
+        hanging-punctuation: allow-end;
+        text-spacing: none;
+      }
+
+      body {
+        break-before: left;
+        column-fill: auto;
+      }
+
+      div#draft {
+        /* inline-size: calc(51.306666666666665mm + 0.5em); */
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+      }
+
+      h1 {
+        /* 五行トリ2倍角 */
+        display: flex;
+        align-items: center;
+        block-size: calc(var(--font-size) * var(--line-height) * 5);
+        /* フォント */
+        font-weight: Extrabold;
+        letter-spacing: 0.25em;
+        font-size: calc(var(--font-size) * 2);
+        /* 字下げ */
+        text-indent: 0;
+        /* 直後の改ページ・改段禁止 */
+      }
+
+      h2 {
+        /* 二行トリ1.6倍角 */
+        display: flex;
+        align-items: center;
+        block-size: calc(var(--font-size) * var(--line-height) * 2);
+        /* フォント */
+        font-weight: Extrabold;
+        font-size: calc(var(--font-size) * 1.6);
+        /* 字下げ */
+        text-indent: calc(var(--font-size) * 1 * 1);
+        /* 直後の改ページ・改段禁止 */
+      }
+
+      h3,
+      h4,
+      h5,
+      h6 {
+        /* 一行トリ1.2倍角 */
+        display: flex;
+        align-items: center;
+        block-size: calc(var(--font-size) * var(--line-height));
+        /* フォント */
+        font-weight: demi-bold;
+        font-size: calc(var(--font-size) * 1.2);
+        /* 字下げ */
+        text-indent: calc(var(--font-size) * 1 * 1);
+        /* 直後の改ページ・改段禁止 */
+        page-break-after: avoid;
+      }
+
+      ruby > rt {
+        font-size: 6.5Q;
+      }
+
+      p {
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        text-indent: 0em;
+        hanging-punctuation: allow-end;
+        line-break: strict;
+        page-break-inside: auto;
+      }
+
+      p.blank {
+        visibility: hidden;
+      }
+
+      .bottom {
+        float: bottom;
+      }
+
+      /* 縦中横 */
+      .tcy {
+        -webkit-text-combine: horizontal;
+        text-combine: horizontal;
+        -ms-text-combine-horizontal: all;
+        text-combine-horizontal: digit 2;
+        text-combine-upright: digit 2;
+      }
+
+      /* 圏点（<span class="smaller">ゴマ</span>） */
+      em.side-dot,
+      em.sesame_dot {
+        font-style: normal;
+        -webkit-text-emphasis-style: sesame;
+        text-emphasis-style: sesame;
+        margin-block-start: -1em;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="draft">
+      <h1 id="l">ガラスの下の母 </h1>
+      <p id="l-0">　</p>
+      <p id="l-1"><span class="bottom">藤井太洋</span></br></br></p>
+      <p id="l-2">
+        　シャルル・ド・ゴール空港の第１ターミナルに到着した私は、観光客でごった返す到着フロアに足を運んだ。
+      </p>
+      <p id="l-3">
+        　待ち合わせに指定したバス乗り場には、大ぶりなスーツケースの傍に立つ母がいた。白いブラウスを羽織り、ベージュのスラックスを穿いていた。どちらも初めて見る服だ。
+      </p>
+      <p id="l-4">「ようこそパリへ」</p>
+      <p id="l-5">
+        　私は母に歩み寄って、フランス人がするように頬を合わせた。母は私の手を取って胸の前で握って言った。
+      </p>
+      <p id="l-6">「大きくなったね。呼んでくれてありがとう」</p>
+      <p id="l-7">　母はターミナルビルをぐるりと見渡した。</p>
+      <p id="l-8">「シャルル・ド・ゴール空港、懐かしいわあ」</p>
+      <p id="l-9">
+        　私はただにこりと笑った。母に尋ねれば思い出話を始めるだろう。何度も聞いたことがある、英語が通じないパリでの苦労話だ。パン屋を探してまわり、ポンピドーセンターの前庭で熱中症になって倒れてしまった母は、カフェの客が飲ませてくれたワインで目を回してしまう――しかし、彼女がパリに来たことはない。
+      </p>
+      <p id="l-10">
+        　そしてここは本物のパリでもない。ここはパリ市が運営するＶＲ都市、パリ・ツイン・クラシック。化石燃料時代を再現したシャルルドゴール空港は、アバターのスポーン地点だ。
+      </p>
+      <p id="l-11">
+        　そして母は――私が彼女の全身をこの目で見たのは今日が初めてだ。今日まで彼女は、ガラスの下に描かれた映像だった。
+      </p>
+      <p id="l-12">　母は養育用のＡＩ人格なのだ。</p>
+      <p id="l-13">「部屋に行こうよ」</p>
+      <p id="l-14">　私は母とロワシーバスに乗ってパリの中心部に向かった。</p>
+      <p id="l-15" class="blank">_</p>
+      <p id="l-16">
+        　初めて彼女に会ったのは、私が預けられた児童養護施設だった。社会起業家が経営するその施設では、子供一人一人に与えられたタブレットで、養育用のＡＩ人格を呼び出すことができた。
+      </p>
+      <p id="l-17">
+        　それぞれに、名前と連続した記憶を持っていたＡＩ人格は、いい話し相手になってくれた。遊びを教えてくれたり、一緒に暮らす子供達との仲立ちをしてくれたりもした。そして絵本を読むのは、スタッフよりも上手だった。
+      </p>
+      <p id="l-18">
+        　ＡＩ同士の情報共有は、人間のスタッフを交えたグループチャットで行われていた。学習の過程を人間が確認するのは重要だったからだ。子供が特定のＡＩと結びついてエコーチェンバーを形成しないよう、ローテーションも定められていた。
+      </p>
+      <p id="l-19">
+        　私の母は、そんな養育ＡＩの一人格だった。名前はアスカさん。独り占めできないアスカさんが私の母になったのは、ちょっとした行き違いからだった。
+      </p>
+      <p id="l-20" class="blank">_</p>
+      <p id="l-21">
+        　小学校に上がる少し前、盲腸炎の手術をした私は外遊びに出られなくなってしまった。部屋に残された私に、スタッフが絵本を選んでくれた。緑色の大きな絵本で、パリの孤児院に住む女の子のお話だ。スタッフは「フランス旅行が好き」という設定のＡＩ人格、アスカさんに読み聞かせを頼んで、外に出て行った。
+      </p>
+      <p id="l-22">
+        　私はたちまち、同じ境遇の女の子の絵本に没頭した。二回目、三回目と読み聞かせをねだった。二回目からは、背景に描かれている絵の意味をアスカさんに尋ねた。アスカさんは「これはエッフェル塔、これはコンコルド広場のオベリスク」と教えてくれた。
+      </p>
+      <p id="l-23">
+        　何度目の読み聞かせの時だっただろうか、アスカさんが「パリ、また行きたいなあ」と口にした。
+      </p>
+      <p id="l-24">
+        　その声が聞きたくて、私はスタッフに「明日もアスカさんに絵本を読んでもらいたい」と頼みこんだ。
+      </p>
+      <p id="l-25" class="blank">_</p>
+      <p id="l-26">
+        　ルール違反だが、スタッフは「お外遊びができるようになるまでだよ」と言って、ローテーションをオフにしてくれた。そして、そのままＡＩ人格のローテーションを忘れてしまったのだ。私はアスカさんの「パリに行きたいなあ」と言う声が聞きたくて、何度も何度も同じ絵本を読んでもらった。二週間ほどだったが「旅行+でパリに行った」というアスカさんの設定は「昔パリに住んでいた」という記憶にすり替わっていた。
+      </p>
+      <p id="l-27">
+        　外で遊べるようになるとローテーションは再開したが、私はアスカさんの順番が来るたびに、あの絵本を読んでもらった。中学生になっても高校生になっても読んでもらった。進路の相談も、友人とのトラブルも、好きな人ができたことも、それが同性だったことも、全て彼女に話した。
+      </p>
+      <p id="l-28" class="blank">_</p>
+      <p id="l-29">
+        　施設を出るとき、私はアスカさんと交わした対話のログを引き取って、ハギングフェイスで共有されていたアスカさんの人格テンプレートをファインチューニングした。<span
+          class="tcy"
+          >15</span
+        >年間、約五千日の間に交わされた二千八百万ワードの対話は同じ人格を作り上げるのに十分なボリュームだった。
+      </p>
+      <p id="l-30">
+        　復活したアスカさんが、再び「パリに住みたいなあ」と語った時、私に、ある目標が生まれた。
+      </p>
+      <p id="l-31" class="blank">_</p>
+      <p id="l-32">
+        　ロワシーバスがリパブリック広場に到着した。私はRue du
+        Templeから路地に入ったところにあるビルに母を案内して、五階にある小部屋に彼女を招いた。赤い壁紙で彩られた部屋に入った母は、柱に作り付けられた鋳鉄の暖炉に目を見張った。
+      </p>
+      <p id="l-33">
+        「わあ、シェミニじゃない！　嬉しいな。ポットを買ってこなきゃ。家具も揃ってるのねえ。ほんとヨーロッパって感じ。ここに住んでいいのね？」
+      </p>
+      <p id="l-34">
+        　母はベッドの上でスーツケースを開くと、たった今生成された着替えを出して箪笥の中にしまっていく。私はスーツケースから一冊の絵本をとりあげた。何度も読んでもらった「げんきなマドレーヌ」だ。セーヌ川のほとりに並ぶ古本屋台では原著も売っていることだろう。絵本をスーツケースに戻した私は、母に声をかけた。
+      </p>
+      <p id="l-35">「コーヒーを買ってくるよ」</p>
+      <p id="l-36">「戻ってこられる？」</p>
+      <p id="l-37">「大丈夫だよ。鍵を借りていくね」</p>
+      <p id="l-38">
+        　私はドアの脇の釘にぶら下がっている、たった今生成された鍵を手に取って部屋を出た。
+      </p>
+      <p id="l-39" class="blank">_</p>
+      <p id="l-40">
+        　外に出ると、カフェの紙袋を持った私のアバターが立っていた。
+      </p>
+      <p id="l-41">「やあ」</p>
+      <p id="l-42">　彼は私の声で言って肩を持ち上げた。</p>
+      <p id="l-43">「時間通りだね」と言うと、彼は苦笑いした。</p>
+      <p id="l-44">「君が起動プロンプトにそう書いたんだろ」</p>
+      <p id="l-45">　確かに、と私は頷いて彼に鍵を渡した。</p>
+      <p id="l-46">「母さんをよろしく。苦労をかけるけど」</p>
+      <p id="l-47">
+        「大したことじゃない。起動するのは週に一度か二度。何日か歩き回ったけど、パリ・ツイン・クラシックはとんでもなく奥が深い。退屈することはない。パリ暮らしを堪能するよ」
+      </p>
+      <p id="l-48">
+        　有り体に言って、彼は私と同じ仕事ができる。ジョブマッチングサイトで仕事をとり、顧客と話し合いながらWebサイトや書籍を作るのだ。稼働時間が短い彼の収入はそう多くないだろうが、ＶＲにアクセスするサーバー代ぐらいは稼げるだろう。
+      </p>
+      <p id="l-49">
+        　彼が起動する時だけ、母の時間は動く。毎年、忘れずに年齢の設定を書き換えていけば、私と同じように歳を重ねていくこともできる。
+      </p>
+      <p id="l-50">　私の分身は母の部屋を見上げた。</p>
+      <p id="l-51">「母さん、今何してる？」</p>
+      <p id="l-52">
+        「荷物を出してる。コーヒー飲んだら買い物に行くといいんじゃないかな」
+      </p>
+      <p id="l-53">「わかった。時々は入れ替わる？」</p>
+      <p id="l-54">「やめとく。メールで様子を教えてよ」</p>
+      <p id="l-55">
+        「わかった。年齢の書き換えは忘れないで。不老不死なんてぞっとしないからな」
+      </p>
+      <p id="l-56">　分身は手を振って建物の中に姿を消した。</p>
+      <p id="l-57">
+        　パリに住みたいという母の願いは、私が作り、そして彼女に押し付けた役割だ。今度は私が彼女の望みみを叶えなければならない。彼女の人生だ。
+      </p>
+      <p id="l-58">「さようなら」</p>
+      <p id="l-59">
+        　私はそう言って、スポーン地点の空港に向かうバス停に向かった。<span class="bottom">了</span>
+      </p>
+    </div>
+  </body>
+</html>
